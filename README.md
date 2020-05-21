@@ -2,7 +2,7 @@
 
 This repo is a base for UI automation using wdio. Some things you should know:
 - It it set to generate allure results automatically.
-- It has a preview to generate mochawesome reports but it's not implemented.
+- It has a preview to generate mochawesome reports but they're not implemented.
 
 
 ## Pre-requisites
