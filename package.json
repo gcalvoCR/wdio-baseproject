@@ -6,7 +6,7 @@
   "scripts": {
     "test-mac": "node ./node_modules/.bin/wdio ./wdio.conf.js",
     "test-windows": "npx wdio run wdio.conf.js",
-    "generate-mochawesome": "marge ./Results/results.json --t 'My project results'"
+    "generate-mochawesome": "marge ./mochawesome-results/results.json --t 'My project results'"
   },
   "keywords": [],
   "author": "",
