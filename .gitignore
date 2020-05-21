@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# test results
+allure-results/*
+allure-report/*
+mochawesome-results/*
+
+# keep folders of results
+!allure-results/.gitkeep
+!allure-report/.gitkeep
+!mochawesome-results/.gitkeep
