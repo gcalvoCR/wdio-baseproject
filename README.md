@@ -6,9 +6,9 @@ This repo is a base for UI automation using wdio. Some things you should know:
 
 
 ## Pre-requisites
+Make sure you have installed:
 - Install Node.
 - Visual Studio Code or any other code editor installed.
-
 
 
 # Steps
@@ -17,7 +17,21 @@ This repo is a base for UI automation using wdio. Some things you should know:
 - Open the solution on VS code or any code editor of your preference.
 - check the scripts to run under the file config.json.
 
-Have any questions? Feel free to reach out to me!
+# Useful commands
+- Want to generate the allure reports with history? Open up a terminal/CMD and navigate to the root of the project:
+There do:
+```sh
+cp -R ./allure-report/history/ ./allure-results/
+allure generate --clean
+allure open
+```
+
+but if you don't have allure reporter installed globally you should do
+```sh
+cp -R ./allure-report/history/ ./allure-results/
+npx allure generate --clean
+npx allure open
+```
 
 ___
 
