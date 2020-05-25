@@ -1,29 +1,23 @@
-loginData = require('../data/credentials')
 
 class Login{
 
     /**************************************  Elements  **************************************/
 
-    get btnAccept() {return $("//*[@class='notice-button btn btn-lg btn-primary']")}
-    get inputUsername() {return $("//input[@placeholder='Email'][@autocomplete='off']")}
-    get inputPassword() {return $("//input[@placeholder='Password'][@autocomplete='off']")}
-    get btnLogin() {return $("//*[@class='login-button btn btn-lg btn-primary']")}
+    get inputUsername() {return $("input[name='username']")}
+    get inputPassword() {return $("input[name='password']")}
+    get btnLogin() {return $("button[type='submit']")}
+    get invalidMessage(){ return $(".error")}
+    get validMessage(){ return $(".success")}
 
 
     /**************************************  Actions  **************************************/
 
-    login(username){
-        this.clickBtnAccept();
+    login(username, password){
         this.enterUsername(username);
-        this.enterPasword();
+        this.enterPasword(password);
         this.clickBtnLogin();
     }
     
-    clickBtnAccept(){
-        this.btnAccept.waitForDisplayed();
-        this.btnAccept.click();
-    }
-
     clickBtnLogin(){
         this.btnLogin.click();
     }
@@ -33,9 +27,9 @@ class Login{
         this.inputUsername.setValue(username);
     }
 
-    enterPasword(){
+    enterPasword(password){
         this.inputUsername.waitForDisplayed();
-        this.inputPassword.setValue(loginData.password);
+        this.inputPassword.setValue(password);
     }
 
 }
